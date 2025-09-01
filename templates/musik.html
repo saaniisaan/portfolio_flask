@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Musik - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        audio {
+            display: block;
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        ul.youtube-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.youtube-links li {
+            margin: 10px 0;
+        }
+
+        ul.youtube-links li a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul.youtube-links li a:hover {
+            color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Musik</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about">Über mich</a> |
+            <a href="/fotografie">Fotografie</a> |
+            <a href="/musik">Musik</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Meine Lieblingsmusik</h2>
+
+        <h3>Audio-Dateien</h3>
+        <audio controls>
+            <source src="{{ url_for('static', filename='musik/musik1.mp3') }}" type="audio/mpeg">
+            Dein Browser unterstützt keine Audio-Wiedergabe.
+        </audio>
+
+        <audio controls>
+            <source src="{{ url_for('static', filename='musik/musik2.mp3') }}" type="audio/mpeg">
+            Dein Browser unterstützt keine Audio-Wiedergabe.
+        </audio>
+
+        <audio controls>
+            <source src="{{ url_for('static', filename='musik/musik3.mp3') }}" type="audio/mpeg">
+            Dein Browser unterstützt keine Audio-Wiedergabe.
+        </audio>
+
+        <h3>Meine Lieblingsvideos auf YouTube</h3>
+        <ul class="youtube-links">
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">YouTube Video 1</a></li>
+            <li><a href="https://www.youtube.com/watch?v=3JZ4pnNtyxQ" target="_blank">YouTube Video 2</a></li>
+            <li><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">YouTube Video 3</a></li>
+        </ul>
+    </main>
+</body>
+</html>

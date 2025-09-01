@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Fotografie - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* منو و هدر */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* گالری عکس با Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        h3 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fotografie</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about">Über mich</a> |
+            <a href="/fotografie">Fotografie</a> |
+            <a href="/musik">Musik</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Meine Fotos</h2>
+
+        <h3>Natur</h3>
+        <div class="gallery">
+            <img src="{{ url_for('static', filename='img/natur1.jpg') }}" alt="Natur 1">
+            <img src="{{ url_for('static', filename='img/natur2.jpg') }}" alt="Natur 2">
+        </div>
+
+        <h3>Kochen</h3>
+        <div class="gallery">
+            <img src="{{ url_for('static', filename='img/kochen1.jpg') }}" alt="Kochen 1">
+            <img src="{{ url_for('static', filename='img/kochen2.jpg') }}" alt="Kochen 2">
+        </div>
+    </main>
+</body>
+</html>

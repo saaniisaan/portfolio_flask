@@ -1,0 +1,67 @@
+/* فونت و رنگ‌بندی */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* هدر و منو */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1abc9c;
+}
+
+/* محتوای اصلی */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* گالری عکس */
+/* کانتینر گالری */
+/* کانتینر گالری با Flexbox */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+/* هر عکس */
+.gallery img {
+    width: 100%;
+    height: 150px;        /* ارتفاع ثابت برای همه عکس‌ها */
+    object-fit: cover;    /* تصویر داخل کادر خودش بدون کشیدگی */
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* بخش موسیقی */
+audio {
+    display: block;
+    margin: 10px 0;

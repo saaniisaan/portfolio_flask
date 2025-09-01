@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Sanaz Azimi - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* فقط برای صفحه اصلی: متن بزرگتر */
+        .hero {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: #2c3e50;
+        }
+        .hero p {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Willkommen auf meinem Portfolio</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about">Über mich</a> |
+            <a href="/fotografie">Fotografie</a> |
+            <a href="/musik">Musik</a>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <h1>Sanaz Azimi</h1>
+            <p>Softwareentwicklerin mit einem Master in Musik. Über 10 Jahre Erfahrung in Programmierung, Leidenschaft für Fotografie, Tanz und Kochen.</p>
+            <p>Hier zeige ich meine Projekte, Fotos und musikalische Favoriten.</p>
+        </div>
+    </main>
+</body>
+</html>
