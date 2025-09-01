@@ -5,56 +5,17 @@
     <title>Fotografie - Portfolio</title>
     <link rel="stylesheet" href="static/css/style.css">
     <style>
-        /* منو و هدر */
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #1abc9c;
-        }
-
-        main {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        /* گالری عکس با Grid */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 40px;
+            justify-content: center;
+            margin-top: 20px;
         }
-
         .gallery img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid #ccc;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        h3 {
-            margin-top: 40px;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -62,27 +23,27 @@
     <header>
         <h1>Fotografie</h1>
         <nav>
-            <a href="/">Home</a> |
-            <a href="/about">Über mich</a> |
-            <a href="/fotografie">Fotografie</a> |
-            <a href="/musik">Musik</a>
+            <a href="index.html">Home</a> |
+            <a href="about.html">Über mich</a> |
+            <a href="fotografie.html">Fotografie</a> |
+            <a href="musik.html">Musik</a>
         </nav>
     </header>
+
     <main>
-        <h2>Meine Fotos</h2>
-
-        <h3>Natur</h3>
-        <div class="gallery">
-            <img src="static/images/photo1.jpg" alt="Photo1">
-            <img src="static/images/photo2.jpg" alt="Photo2">
-            
-        </div>
-
-        <h3>Kochen</h3>
-        <div class="gallery">
-            <img src="static/images/kochen1.jpg" alt="kochen1">
-            <img src="static/images/kochen2.jpg" alt="kochen2">
-        </div>
+        <section>
+            <h2>Meine Fotos</h2>
+            <div class="gallery">
+                <img src="static/images/nature1.jpg" alt="Natur">
+                <img src="static/images/nature2.jpg" alt="Natur">
+                <img src="static/images/cooking1.jpg" alt="Kochen">
+                <img src="static/images/cooking2.jpg" alt="Kochen">
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Sanaz Azimi</p>
+    </footer>
 </body>
 </html>
