@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Fotografie - Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
     <style>
         /* منو و هدر */
         header {
@@ -73,14 +73,15 @@
 
         <h3>Natur</h3>
         <div class="gallery">
-            <img src="{{ url_for('static', filename='img/natur1.jpg') }}" alt="Natur 1">
-            <img src="{{ url_for('static', filename='img/natur2.jpg') }}" alt="Natur 2">
+            <img src="static/images/photo1.jpg" alt="Photo1">
+            <img src="static/images/photo2.jpg" alt="Photo2">
+            
         </div>
 
         <h3>Kochen</h3>
         <div class="gallery">
-            <img src="{{ url_for('static', filename='img/kochen1.jpg') }}" alt="Kochen 1">
-            <img src="{{ url_for('static', filename='img/kochen2.jpg') }}" alt="Kochen 2">
+            <img src="static/images/kochen1.jpg" alt="kochen1">
+            <img src="static/images/kochen2.jpg" alt="kochen2">
         </div>
     </main>
 </body>
